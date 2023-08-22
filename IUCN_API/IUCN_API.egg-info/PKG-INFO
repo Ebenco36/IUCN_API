@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: IUCN-API
+Version: 0.1.0
+Summary: A Python client for the IUCN Red List API
+Home-page: https://github.com/ebenco94/IUCN_API
+Author: Awotoro Ebenezer
+Author-email: ebenco94@gmail.com
+Keywords: IUCN,Red list,Extinction,Animal,plant,IUCN API
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE

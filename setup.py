@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="redlist-api-client",
+    name="IUCN_API",
     version="0.1.0",
     author="Awotoro Ebenezer",
     author_email="ebenco94@gmail.com",
@@ -14,6 +14,7 @@ setup(
     url="https://github.com/ebenco94/IUCN_API",
     packages=find_packages(),
     install_requires=["requests"],
+    keywords=["IUCN", "Red list", "Extinction", "Animal", "plant", "IUCN API"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3",

@@ -1,5 +1,5 @@
 import pytest
-from redlist_api_package.src.Groups import Groups
+from IUCN_API.modules.Groups import Groups
 import logging
 
 logging.basicConfig(level=logging.DEBUG)
