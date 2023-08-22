@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="IUCN_API",
-    version="0.1.0",
+    version="0.1.5",
     author="Awotoro Ebenezer",
     author_email="ebenco94@gmail.com",
     description="A Python client for the IUCN Red List API",
@@ -13,7 +13,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/ebenco94/IUCN_API",
     packages=find_packages(),
-    install_requires=["requests"],
+    install_requires=["requests", "python-dotenv"],
     keywords=["IUCN", "Red list", "Extinction", "Animal", "plant", "IUCN API"],
     classifiers=[
         "Development Status :: 3 - Alpha",

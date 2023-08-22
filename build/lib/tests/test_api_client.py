@@ -1,16 +1,31 @@
 import pytest
 from IUCN_API.modules.Groups import Groups
-import logging
+from IUCN_API.modules.History import History
+from IUCN_API.modules.View import View
+from IUCN_API.modules.Exceptions.APIKeyException import APIKeyException
 
-logging.basicConfig(level=logging.DEBUG)
-
-API_KEY = "9bb4facb6d23f48efbf424bb05c0c1ef1cf6f468393bc745d42179ac4aca5fee"
 
 @pytest.fixture
-def api_client():
-    return Groups(API_KEY)
+def api_client_group():
+    return Groups()
 
-def test_get_species_info(api_client):
-    group_list = api_client.get_species_group_list()
-    assert group_list
+@pytest.fixture
+def api_client_history():
+    return History()
 
+@pytest.fixture
+def api_client_view():
+    return View()
+
+def test_get_groups(api_client_group):
+    data = api_client_group.get_species_group_list()
+    assert data
+
+
+def test_get_view(api_client_view):
+    data = api_client_view.get_species_single_by_name("Loxodonta Africana")
+    assert data
+
+def test_get_history(api_client_history):
+    data = api_client_history.get_species_history_by_name("Loxodonta Africana")
+    assert data

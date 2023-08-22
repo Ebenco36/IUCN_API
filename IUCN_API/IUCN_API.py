@@ -1,12 +1,16 @@
 import os
 import requests
+from dotenv import load_dotenv
+from IUCN_API.modules.Exceptions.APIKeyException import APIKeyException
 
-from Exceptions.APIKeyException import APIKeyException
+
+# Load variables from .env into environment
+load_dotenv()
 
 class RedListApiClient:
     def __init__(self):
         # Read environment variable
-        api_key = os.environ.get("API_KEY")
+        api_key = os.getenv("API_KEY")
         if (not api_key or api_key == ""):
             raise APIKeyException("API |Key has not been set. Add API_KEY = '' in your .env file")
         

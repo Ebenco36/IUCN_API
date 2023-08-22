@@ -1,3 +1,6 @@
 history.txt
 .pypirc
 .env
+dist
+build
+*.egg-info

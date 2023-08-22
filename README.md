@@ -66,6 +66,15 @@ from IUCN_API.modules.Groups import Groups
 
 ```
 
+Group Methods you can access 
+
+```bash
+group = Groups()
+group.get_species_group_list()
+group.get_species_by_group_name(group_name)
+
+```
+
 
 ### Citations
 
@@ -74,18 +83,58 @@ from IUCN_API.modules.Citations import Citations
 
 ```
 
-Conservation
+Citation Methods you can access 
+
+```bash
+citation = Citations()
+citation.get_species_citation_by_name(species_name="loxodonta africana")
+citation.get_species_citation_region_by_name(region_identifier="europe", species_name="loxodonta africana")
+citation.get_species_citation_by_id(species_id="299929")
+citation.get_species_citation_region_by_id(region_identifier="europe", species_id="9929292")
+
+```
+
+### Conservation
 
 ```bash
 from IUCN_API.modules.Conservation import Conservation
 
 ```
 
+Conservation Methods you can access 
 
-General
+```bash
+conservation = Conservation()
+conservation.get_species_conservation_measure_by_name(species_name)
+conservation.get_species_conservation_measure_by_name_by_region(species_name, region_identifier)
+conservation.get_species_conservation_measure_by_id(species_id)
+conservation.get_species_conservation_measure_by_id_by_region(species_id, region_identifier)
+
+```
+
+
+### General
 
 ```bash
 from IUCN_API.modules.General import General
+
+```
+
+General Methods you can access 
+
+```bash
+general = General()
+general.get_version()
+general.get_countries()
+general.get_regions()
+general.get_species_by_country(country)
+general.get_species(page=1, per_page=10)
+general.get_species_region(region_identifier="europe", page=1, per_page=10)
+general.get_species_count()
+general.get_species_count_by_region(region_identifier="europe")
+general.get_species_synonyms_by_name(species_name)
+general.get_species_common_name_by_name(species_name)
+general.get_species_by_category(category)
 
 ```
 
@@ -97,57 +146,140 @@ from IUCN_API.modules.GrowthForm import GrowthForm
 
 ```
 
+GrowthForm Methods you can access 
 
-Habitats
+```bash
+growth_form = GrowthForm()
+growth_form.get_species_growth_forms_by_name(species_name)
+growth_form.get_species_growth_forms_by_name_by_region(species_name, region_identifier)
+growth_form.get_species_growth_forms_by_id(species_id)
+growth_form.get_species_growth_forms_by_id_by_region(species_id, region_identifier)
+
+```
+
+
+
+### Habitats
 
 ```bash
 from IUCN_API.modules.Habitats import Habitats
 
 ```
+Habitats Methods you can access 
+
+```bash
+habitats = Habitats()
+habitats.get_species_habitat_by_name(species_name)
+habitats.get_species_habitat_by_name_by_region(species_name, region_identifier)
+habitats.get_species_habitat_by_id(species_id)
+habitats.get_species_habitat_by_id_by_region(species_id, region_identifier)
+
+```
 
 
-History
+### History
 
 ```bash
 from IUCN_API.modules.History import History
 
 ```
+History Methods you can access 
 
+```bash
+history = History()
+history.get_species_history_by_name(species_name)
+history.get_species_history_by_name_by_region(species_name, region_identifier)
+history.get_species_history_by_id(species_id)
+history.get_species_history_by_id_by_region(species_id, region_identifier)
 
-Narratives
+```
+
+### Narratives
 
 ```bash
 from IUCN_API.modules.Narratives import Narratives
 
 ```
+Narratives Methods you can access 
+
+```bash
+narratives = Narratives()
+narratives.get_species_narrative_by_name(species_name)
+narratives.get_species_narrative_by_name_by_region(species_name, region_identifier="europe")
+narratives.get_species_narrative_by_id(species_id)
+narratives.get_species_narrative_by_id_by_region(species_id, region_identifier="europe")
+
+```
 
 
-Occurrence
+### Occurrence
 
 ```bash
 from IUCN_API.modules.Occurrence import Occurrence
 
 ```
+Occurrence Methods you can access 
+
+```bash
+occurrence = Occurrence()
+occurrence.get_species_country_occurence_by_name(species_name)
+occurrence.get_species_country_occurence_by_name_by_region(species_name, region_identifier)
+occurrence.get_species_country_occurence_by_id(species_id)
+occurrence.get_species_country_occurence_by_id_by_region(species_id, region_identifier)
+
+```
 
 
-Threats
+### Threats
 
 ```bash
 from IUCN_API.modules.Threats import Threats
 
 ```
 
-View
+Threats Methods you can access 
+
+```bash
+threats = Threats()
+threats.get_species_threats_by_name(species_name)
+threats.get_species_threats_by_name_by_region(species_name, region_identifier):
+threats.get_species_threats_by_id(species_id)
+threats.get_species_threats_by_id_by_region(species_id, region_identifier)
+
+```
+
+### View
 
 ```bash
 from IUCN_API.modules.View import View
 
 ```
+View Methods you can access 
+
+```bash
+view = View()
+view.get_species_single_by_name(species_name)
+view.get_species_single_by_name_by_region(species_name, region_identifier="europe")
+view.get_species_single_by_id(species_id)
+view.get_species_single_by_id_by_region(species_id, region_identifier="europe")
+
+```
 
 
-Weblinks
+### Weblinks
 
 ```bash
 from IUCN_API.modules.Weblinks import Weblinks
+
+```
+
+Weblinks Methods you can access 
+
+```bash
+weblinks = Weblinks()
+weblinks.get_red_list_website_link_name(species_name:str="")
+weblinks.get_red_list_website_redirect_name(species_name:str="")
+weblinks.get_red_list_website_link_id(taxon_id:int="")
+weblinks.get_red_list_website_redirect_id(taxon_id:int="", region_identifier:str="")
 
 ```

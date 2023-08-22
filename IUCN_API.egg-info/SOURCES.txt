@@ -21,5 +21,7 @@ IUCN_API/modules/Threats.py
 IUCN_API/modules/View.py
 IUCN_API/modules/Weblinks.py
 IUCN_API/modules/__init__.py
+IUCN_API/modules/Exceptions/APIKeyException.py
+IUCN_API/modules/Exceptions/__init__.py
 tests/__init__.py
 tests/test_api_client.py
