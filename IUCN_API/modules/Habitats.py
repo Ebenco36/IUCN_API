@@ -2,10 +2,8 @@ from IUCN_API.IUCN_API import RedListApiClient
 
 class Habitats (RedListApiClient):
 
-    def __init__(self, api_key:str = ""):
-        super().__init__(api_key)
-
-
+    def __init__(self):
+        super().__init__()
 
     """
         View organism habitats using name, id and region identifier
