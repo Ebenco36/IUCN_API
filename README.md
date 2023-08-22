@@ -49,10 +49,10 @@ python requires=">=3.6"
 
 ## Installation
 
-Use these commands to install the project:
+Use these command below to install the project:
 
 ```bash
-    pip install IUCN-API
+pip install IUCN-API
 ```
 
 
